@@ -1,0 +1,48 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+Create Procedure [dbo].[usp_GenericEmail] 
+@filepath As varChar(255), @emailrecipeants  As varChar(255), @emailsecure  As varChar(255),
+@emailsubject  As varChar(255), @attachfile  As varChar(1), @body  As varChar(MAX)
+As
+
+Begin
+Set NoCount On
+
+Declare @result as Int
+Exec master.dbo.xp_fileexist @filepath, @result OUTPUT
+
+If @result=1
+	Begin
+		Declare @subject As varChar(255)
+		Set @subject=@emailsubject+' '+@emailsecure
+		Exec msdb..sp_send_dbmail 
+			@profile_name='YourProfileName',
+			@recipients=@emailrecipeants,
+			@subject=@subject,
+			@body=@body,
+			@body_format='HTML',
+			@file_attachments=@filepath 
+	End
+Else
+	Begin
+		Declare @SQL varchar(72),@jobID UniqueIdentifier, @jobName SysName
+		Set  @SQL = 'Set @guid = CAST(' + SUBSTRING(APP_NAME(), 30, 34) + ' As UniqueIdentifier)'
+		Exec sp_executesql @SQL, N'@guid UniqueIdentifier OUT', @guid = @jobID OUT
+
+		Select @jobName = name FROM msdb..sysjobs WHERE job_id = @jobID
+
+		Declare @error As varChar(MAX)
+		Set @error='File Missing ' + @filepath + '<BR/> <BR/>JOB:' + @jobName
+		EXEC msdb..sp_send_dbmail 
+			  @profile_name='YourProfileName',
+			  @recipients='JobMonitor@yourcompany.COM',
+			  @subject='[IMPORTANT] The generic eMail procedure failed',
+			  @body=@error,
+			  @body_format='HTML',
+			  @importance='High'
+
+	End
+End
