@@ -1,0 +1,25 @@
+IF OBJECT_ID('tempdb..##TEMPJOBS') Is Not Null
+	Drop Table ##TEMPJOBS
+
+Select	SJ.[name] As JobName,
+		SubString(CAST(SJS.next_run_date As CHAR(8)),5,2)+'/'+SubString(CAST(SJS.next_run_date As CHAR(8)),7,2)+'/'+SubString(CAST(SJS.next_run_date As CHAR(8)),1,4) As JobDate,
+		SubString(CAST(SJS.next_run_date As CHAR(8)),1,4)+'-'+SubString(CAST(SJS.next_run_date As CHAR(8)),5,2)+'-'+SubString(CAST(SJS.next_run_date As CHAR(8)),7,2) As JobDateX,
+		Case When LEN(SJS.next_run_time) = 5 
+			 Then '0'+Substring(CAST(SJS.next_run_time As CHAR(5)),1,1)+':'+Substring(CAST(SJS.next_run_time As CHAR(5)),2,2)+':'+Substring(CAST(SJS.next_run_time As CHAR(5)),4,2)
+			 Else Substring(CAST(SJS.next_run_time As CHAR(6)),1,2)+':'+Substring(CAST(SJS.next_run_time As CHAR(6)),3,2)+':'+Substring(CAST(SJS.next_run_time As CHAR(6)),5,2)
+			 End As JobTime
+Into	##TEMPJOBS
+From	msdb..sysjobs sj (NOLOCK)
+Left	Join msdb..sysjobschedules sjs(NOLOCK)
+		On sjs.job_id=sj.job_id
+Where	SJ.[enabled] = 1
+And		SJS.next_run_time > 0
+And		Not SJS.next_run_date Is Null	
+
+Select	J.*
+From	##TEMPJOBS As J
+Where	Cast(JobDateX+' '+JobTime+'.000' As Datetime) > GETDATE()
+Order	By J.JobDate,J.JobTime
+
+IF OBJECT_ID('tempdb..##TEMPJOBS') Is Not Null
+	Drop Table ##TEMPJOBS
