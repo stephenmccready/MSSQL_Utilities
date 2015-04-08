@@ -1,0 +1,93 @@
+Declare    
+	  @profile_name               sysname       
+	, @recipients                 VARCHAR(MAX)
+	, @copy_recipients            VARCHAR(MAX)
+	, @blind_copy_recipients      VARCHAR(MAX)
+	, @subject                    NVARCHAR(255)
+	, @body                       NVARCHAR(MAX)
+	, @body_format                VARCHAR(20)
+	, @importance                 VARCHAR(6)
+	, @sensitivity                VARCHAR(12)
+	, @file_attachments           NVARCHAR(MAX) 
+	, @query                      NVARCHAR(MAX)
+	, @execute_query_database     sysname 
+	, @attach_query_result_as_file BIT
+	, @query_attachment_filename  NVARCHAR(260) 
+	, @query_result_header        BIT
+	, @query_result_width         INT         
+	, @query_result_separator     CHAR(1)
+	, @exclude_query_output       BIT
+	, @append_query_error         BIT
+
+DECLARE My_Cursor CURSOR FOR
+Select	Distinct 
+		  P.name As profile_name 
+		, A.recipients 
+		, A.copy_recipients
+		, A.blind_copy_recipients
+		, A.[subject]
+		, A.body
+		, A.body_format
+		, A.importance
+		, A.sensitivity
+		, A.file_attachments
+		, A.query
+		, A.execute_query_database
+		, A.attach_query_result_as_file
+		, AT.[filename] As query_attachment_filename
+		, A.query_result_header
+		, A.query_result_width
+		, A.query_result_separator
+		, A.exclude_query_output
+		, A.append_query_error
+From	msdb..sysmail_allitems As A
+Join	msdb..sysmail_profile As P On P.profile_id=A.profile_id
+Left	Outer Join msdb..sysmail_attachments As AT On AT.mailitem_id=A.mailitem_id
+Where	A.mailitem_id=20002 -- Put your specific criteria in here
+
+-- Note:
+/*
+You can also send failed emails from the last 24 hours by using this query instead
+...
+From	msdb..sysmail_faileditems As FI
+Join	msdb..sysmail_allitems As A On A.mailitem_id=FI.mailitem_id
+Join	msdb..sysmail_profile As P On P.profile_id=A.profile_id
+Left	Outer Join msdb..sysmail_attachments As AT On AT.mailitem_id=A.mailitem_id
+Where	FI.sent_date>=DATEADD(hour,-23,GetDate())
+And		FI.sent_date<DATEADD(MINUTE,5,GETDATE())
+*/
+
+OPEN My_Cursor
+FETCH NEXT from My_Cursor into @profile_name, @recipients, @copy_recipients, @blind_copy_recipients, @subject, @body, @body_format
+	, @importance, @sensitivity, @file_attachments, @query, @execute_query_database, @attach_query_result_as_file, @query_attachment_filename
+	, @query_result_header, @query_result_width, @query_result_separator, @exclude_query_output, @append_query_error
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	EXEC msdb..sp_send_dbmail 
+		  @profile_name=@profile_name
+		, @recipients=@recipients
+		, @copy_recipients=@copy_recipients
+		, @blind_copy_recipients=@blind_copy_recipients
+		, @subject=@subject
+		, @body=@body
+		, @body_format=@body_format
+		, @importance=@importance
+		, @sensitivity=@sensitivity
+		, @file_attachments=@file_attachments
+		, @query=@query
+		, @execute_query_database=@execute_query_database
+		, @attach_query_result_as_file=@attach_query_result_as_file
+		, @query_attachment_filename=@query_attachment_filename
+		, @query_result_header=@query_result_header
+		, @query_result_width=@query_result_width
+		, @query_result_separator=@query_result_separator
+		, @exclude_query_output=@exclude_query_output
+		, @append_query_error=@append_query_error
+
+	FETCH NEXT from My_Cursor into @profile_name, @recipients, @copy_recipients, @blind_copy_recipients, @subject, @body, @body_format
+	, @importance, @sensitivity, @file_attachments, @query, @execute_query_database, @attach_query_result_as_file, @query_attachment_filename 
+	, @query_result_header, @query_result_width, @query_result_separator, @exclude_query_output, @append_query_error
+END
+
+Close My_Cursor
+DeAllocate My_Cursor
