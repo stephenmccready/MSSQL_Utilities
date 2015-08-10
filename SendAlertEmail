@@ -1,33 +1,32 @@
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
-Create PROCEDURE [dbo].[SendAlertEmail]
-As 
+Create Procedure [dbo].[SendAlertEmail] @profile_name As NVarChar(255), @recipients As NVarChar(255), @copy_recipients As NVarChar(255)
+As
 
-set nocount on
+-- Usage:
+-- Exec SendAlertEmail 'AMailProfile', 'ITdept@acme.com', 'ANOtherdept@acme.com'
 
-declare @body NVARCHAR(4000)
-declare @subject NVARCHAR(255)
+Set nocount on
 
-DECLARE	@SQL NVARCHAR(72),@jobID UNIQUEIDENTIFIER,@jobName SYSNAME
-SET	@SQL = 'SET @guid = CAST(' + SUBSTRING(APP_NAME(), 30, 34) + ' AS UNIQUEIDENTIFIER)'
-EXEC sp_executesql @SQL, N'@guid UNIQUEIDENTIFIER OUT', @guid = @jobID OUT
+Declare	@SQL NVarChar(72),@jobID UniqueIdentifier,@jobName SysName
+Set	@SQL='Set @guid = Cast('+SUBSTRING(APP_NAME(), 30, 34)+' As UNIQUEIDENTIFIER)'
+EXEC sp_executesql @SQL, N'@guid UniqueIdentifier Out', @guid=@jobID Out
 
-SELECT @jobName = name FROM msdb..sysjobs WHERE	job_id = @jobID
+Select @jobName=name From msdb..sysjobs Where job_id=@jobID
 
+Declare @body NVarChar(4000)
+Declare @subject NVarChar(255)
 set @body = 'SQL Job <b>' + @jobName + '</b> on <b>' + @@servername + '</b> failed.<br / ><br />Check the error log'
 set @subject = 'IMPORTANT: SQL Job ' + @jobName + ' on ' + @@servername + ' failed'
 
 EXEC msdb.dbo.sp_send_dbmail
-	@profile_name = 'YourEmailProfile',
-	@recipients = 'JobMonitor@YourCompany.com',
-	@body = @body,
-	@subject = @subject,
+	@profile_name=@profile_name,
+	@recipients=@recipients,
+	@copy_recipients=@copy_recipients,
+	@body=@body,
+	@subject=@subject,
 	@body_format='HTML',
-	@importance='High'
-	;
-
-GO
+	@importance='High';
