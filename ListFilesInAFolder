@@ -11,7 +11,6 @@ Select    SubString(columns,40, 100) As [FileName]
 		, SubString(columns,1,10) As CreateDate
 		, SubString(columns,13,8) As CreateTime
 		, SubString(columns,21,18) As FileSize
-		, Cast(Replace(SubString(columns,21,18),',','') As BigInt) As IntFileSize
 From @temptable 
 	Where columns not like '%volume%' 
 	and columns is not null 
