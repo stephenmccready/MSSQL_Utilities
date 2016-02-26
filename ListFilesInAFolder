@@ -1,0 +1,22 @@
+Declare @temptable Table (columns nvarchar(200))
+Declare @cmdshell As varchar(256)
+
+-- Chane the dir command below to the folder you want to examine
+Set @cmdshell='dir "\\MyServer\MyFolder\"'
+
+Insert into @temptable
+EXEC xp_cmdshell @cmdshell
+
+Select    SubString(columns,40, 100) As [FileName]
+		, SubString(columns,1,10) As CreateDate
+		, SubString(columns,13,8) As CreateTime
+		, SubString(columns,21,18) As FileSize
+		, Cast(Replace(SubString(columns,21,18),',','') As BigInt) As IntFileSize
+From @temptable 
+	Where columns not like '%volume%' 
+	and columns is not null 
+	and columns not like '%bytes%' 
+	and columns not like '%Directory of%'
+	and columns <> 'File Not Found'
+	and SUBSTRING(columns,40, 100) not In('.','..')
+	and SUBSTRING(columns,25, 5) not In('<DIR>')
