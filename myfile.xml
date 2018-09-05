@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+ <RECORD>
+
+  <FIELD ID="0" xsi:type="CharTerm" TERMINATOR='"' MAX_LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="1" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="2" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="3" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="4" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="5" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="72" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="6" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="37" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="7" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="8" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="9" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="7" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="10" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="7" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="11" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="12" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="72" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="13" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="14" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="37" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="15" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="16" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="17" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="7" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="18" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="7" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="19" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="20" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="21" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="57" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="22" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="57" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="23" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="42" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="24" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="42" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="25" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="26" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="27" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="28" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="29" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="57" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="30" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="57" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="31" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="42" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="32" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="42" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="33" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="34" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="35" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="36" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="37" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="38" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="39" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="40" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="41" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="42" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="43" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="37" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="44" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="45" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="46" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="37" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="47" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="48" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="49" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="50" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="51" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="52" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="53" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="54" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="55" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="56" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="57" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="58" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="59" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="60" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="61" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="62" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="63" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="64" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="65" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="66" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="67" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="68" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="69" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="70" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="71" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="72" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="73" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="74" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="75" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="76" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="77" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="78" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="79" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="80" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="81" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="82" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="83" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="84" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="85" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="86" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="87" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="88" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="89" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="90" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="91" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="92" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="93" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="94" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="95" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="96" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="97" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="98" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="99" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="100" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="101" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="102" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="103" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="104" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="105" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="22" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="106" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+  <FIELD ID="107" xsi:type="CharTerm" TERMINATOR='","' MAX_LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+
+
+  <FIELD ID="108" xsi:type="CharTerm" TERMINATOR="\n" MAX_LENGTH="8096" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
+
+ </RECORD>
+
+ <ROW>
+
+  <COLUMN SOURCE="1" NAME="NPI" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="2" NAME="EntityType" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="3" NAME="ReplacementNPI" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="4" NAME="EIN" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="5" NAME="ProvOrgName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="6" NAME="ProvLastName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="7" NAME="ProvFirstName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="8" NAME="ProvMiddleName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="9" NAME="ProvNamePrefix" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="10" NAME="ProvNameSuffix" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="11" NAME="ProvCredential" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="12" NAME="ProvOthOrgName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="13" NAME="ProvOthOrgNameType" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="14" NAME="ProvOthLastName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="15" NAME="ProvOthFirstName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="16" NAME="ProvOthMiddleName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="17" NAME="ProvOthNamePrefix" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="18" NAME="ProvOthNameSuffix" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="19" NAME="ProvOthCredential" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="20" NAME="ProvOthLastNameType" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="21" NAME="ProvFirstBusMailAddr" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="22" NAME="ProvSecondBusMailAddr" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="23" NAME="ProvBusMailAddrCityName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="24" NAME="ProvBusMailAddrState" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="25" NAME="ProvBusMailAddrPostal" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="26" NAME="ProvBusMailAddrCountry" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="27" NAME="ProvBusMailAddrPhone" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="28" NAME="ProvBusMailAddrFax" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="29" NAME="ProvFirstBusPracLocAddr" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="30" NAME="ProvSecondBusPracLocAddr" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="31" NAME="ProvBusPracLocAddrCityName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="32" NAME="ProvBusPracLocAddrState" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="33" NAME="ProvBusPracLocAddrPostal" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="34" NAME="ProvBusPracLocAddrCountry" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="35" NAME="ProvBusPracLocAddrPhone" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="36" NAME="ProvBusPracLocAddrFax" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="37" NAME="ProvEnumerationDate" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="38" NAME="LastUpdateDate" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="39" NAME="NPIDeactivationReasonCode" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="40" NAME="NPIDeactivationDate" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="41" NAME="NPIReactivationDate" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="42" NAME="ProvGender" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="43" NAME="AuthOffLastName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="44" NAME="AuthOffFirstName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="45" NAME="AuthOffMiddleName" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="46" NAME="AuthOffTitleorPosition" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="47" NAME="AuthOffPhone" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="48" NAME="HCProvTaxonomy_1" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="49" NAME="ProvLic_1" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="50" NAME="ProvLicState_1" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="51" NAME="HCProvPrimTaxonomySw_1" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="52" NAME="HCProvTaxonomy_2" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="53" NAME="ProvLic_2" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="54" NAME="ProvLicState_2" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="55" NAME="HCProvPrimTaxonomySw_2" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="56" NAME="HCProvTaxonomy_3" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="57" NAME="ProvLic_3" xsi:type="SQLNVARCHAR"/>,
+
+  <COLUMN SOURCE="58" NAME="ProvLicState_3" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="59" NAME="HCProvPrimTaxonomySw_3" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="60" NAME="HCProvTaxonomy_4" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="61" NAME="ProvLic_4" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="62" NAME="ProvLicState_4" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="63" NAME="HCProvPrimTaxonomySw_4" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="64" NAME="HCProvTaxonomy_5" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="65" NAME="ProvLic_5" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="66" NAME="ProvLicState_5" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="67" NAME="HCProvPrimTaxonomySw_5" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="68" NAME="HCProvTaxonomy_6" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="69" NAME="ProvLic_6" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="70" NAME="ProvLicState_6" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="71" NAME="HCProvPrimTaxonomySw_6" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="72" NAME="HCProvTaxonomy_7" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="73" NAME="ProvLic_7" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="74" NAME="ProvLicState_7" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="75" NAME="HCProvPrimTaxonomySw_7" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="76" NAME="HCProvTaxonomy_8" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="77" NAME="ProvLic_8" xsi:type="SQLNVARCHAR"/>,
+
+  <COLUMN SOURCE="78" NAME="ProvLicState_8" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="79" NAME="HCProvPrimTaxonomySw_8" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="80" NAME="HCProvTaxonomy_9" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="81" NAME="ProvLic_9" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="82" NAME="ProvLicState_9" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="83" NAME="HCProvPrimTaxonomySw_9" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="84" NAME="HCProvTaxonomy_10" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="85" NAME="ProvLic_10" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="86" NAME="ProvLicState_10" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="87" NAME="HCProvPrimTaxonomySw_10" xsi:type="SQLNVARCHAR"/>
+
+
+
+  <COLUMN SOURCE="88" NAME="HCProvTaxonomy_11" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="89" NAME="ProvLic_11" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="90" NAME="ProvLicState_11" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="91" NAME="HCProvPrimTaxonomySw_11" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="92" NAME="HCProvTaxonomy_12" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="93" NAME="ProvLic_12" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="94" NAME="ProvLicState_12" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="95" NAME="HCProvPrimTaxonomySw_12" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="96" NAME="HCProvTaxonomy_13" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="97" NAME="ProvLic_13" xsi:type="SQLNVARCHAR"/>,
+
+  <COLUMN SOURCE="98" NAME="ProvLicState_13" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="99" NAME="HCProvPrimTaxonomySw_13" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="100" NAME="HCProvTaxonomy_14" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="101" NAME="ProvLic_14" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="102" NAME="ProvLicState_14" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="103" NAME="HCProvPrimTaxonomySw_14" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="104" NAME="HCProvTaxonomy_15" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="105" NAME="ProvLic_15" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="106" NAME="ProvLicState_15" xsi:type="SQLNVARCHAR"/>
+
+  <COLUMN SOURCE="107" NAME="HCProvPrimTaxonomySw_15" xsi:type="SQLNVARCHAR"/>
+
+
+
+</ROW>
+
+</BCPFORMAT>
