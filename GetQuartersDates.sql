@@ -8,9 +8,11 @@ Set @EndDate=Cast('12/31/2018' As DateTime)
 Declare @WorkStartDate As DateTime, @QtrEndMMDD As Char(5)
 
 Declare @TempQtrTable As Table (
-	QtrYYYYMM Char(6)
+	QtrYYYYMM Char(6) Primary Key
 ,	QtrBeginDate DateTime NOT NULL
-,	QtrEndDate DateTime
+,	QtrEndDate DateTime NOT NULL
+,	Unique(QtrBeginDate)
+,	Unique(QtrEndDate)
 )
 
 Set @WorkStartDate=@StartDate
