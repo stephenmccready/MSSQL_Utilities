@@ -1,6 +1,4 @@
-Use Genesis
 -- Create a temp table with 1 record per week for each year from the given start year (2012 in this example)
-
 Declare @CCYY As Int, @Jan1 As DateTime, @Saturday As DateTime
 Set @CCYY = 2012
 
