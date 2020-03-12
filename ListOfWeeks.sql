@@ -13,10 +13,15 @@ Create Table #Weeks (
 While @CCYY <= DatePart(Year, GetDate())
 Begin
 		Set @Jan1 = '1/1/' + Cast(@CCYY As Char(4))
-		Set @Dec31 = '12/31/' + Cast(@CCYY As Char(4))
 
-		Set	@Saturday = '1/' + Case When DatePart(WeekDay, @Jan1) = 1 Then '7' Else
-									Cast( ((8 - DatePart(WeekDay, @Jan1))) As Char(1)) End + '/' + Cast(@CCYY As Char(4))
+		Set	@Saturday = '1/' + Case When DatePart(WeekDay, @Jan1) = 1 Then '7' -- Jan 1 is a Sunday, Jan 7 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 2 Then '6' -- Jan 1 is a Monday, Jan 6 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 3 Then '5' -- Jan 1 is a Tuesday, Jan 5 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 4 Then '4' -- Jan 1 is a Wednesday, Jan 4 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 5 Then '3' -- Jan 1 is a Thursday, Jan 3 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 6 Then '2' -- Jan 1 is a Friday, Jan 2 is Saturday 
+								    When DatePart(WeekDay, @Jan1) = 7 Then '1' -- Jan 1 is a Saturday, Jan 1 is Saturday 
+							   End + '/' + Cast(@CCYY As Char(4))
 									
 		Insert Into #Weeks
 		Select	DatePart(Year, @Saturday) As CCYY
@@ -24,7 +29,7 @@ Begin
 		,		@Saturday - 6 As WeekStart
 		,		@Saturday As WeekEnd
 
-		While @Saturday + 7 <= @Dec31
+		While @Saturday + 7 <= Cast('12/31/' + Cast(@CCYY As Char(4)) As DateTime)
 		Begin
 			Set @Saturday = @Saturday + 7
 			Insert Into #Weeks
